@@ -1,0 +1,137 @@
+{
+    "header": {
+        "home": "Home",
+        "projects": "Projects",
+        "experience": "Experience",
+        "contact": "Contact"
+    },
+    "hero": {
+        "greeting": "Hello, I'm",
+        "name": "Kevin Lopez",
+        "roles": ["Coder", "Programmer", "Engineer"],
+        "description": "I create elegant solutions to complex problems through code."
+    },
+    "projects": {
+        "title": "Featured Projects",
+        "viewProject": "View Project",
+        "technologies": "Technologies",
+        "lenguages": "Lenguages",
+        "items": [
+            {
+                "title": "Fleet Managment System",
+                "description": "A full stack application to manage a fleet of vehicles. Includes real-time tracking, analytics, routes managment, beautiful, modern and immersive interface. ",
+                "technologies": [
+                    "ReactJS",
+                    "Node.js",
+                    "MongoDB",
+                    "Tailwind CSS",
+                    "Google Maps API",
+                    "JWT",
+                    "Prisma ORM"
+                ],
+                "lenguages": ["JavaScript"],
+                "media": "src/assets/projects/fleet-management-system/",
+                "demo": "",
+                "source": ["https://github.com/Zack4U/fleet-management"]
+            },
+            {
+                "title": "Dental Clinic Management System",
+                "description": "A full stack application to manage a dental clinic. Includes patient management, appointments, treatments, billing, a visual and dynamic Teeth Chart.",
+                "technologies": ["SpringBoot", "Tailwind CSS", "MySQL"],
+                "lenguages": ["Java"],
+                "media": "src/assets/projects/dental-clinic-management-system/",
+                "demo": "",
+                "source": ["https://github.com/Zack4U/clinic-spring"]
+            },
+            {
+                "title": "Akinmueble - Real Estate Website",
+                "description": "A full stack real estate website with microservices. Includes property listings, search, filters, contact, fully web business workflow and Email/SMS Notifications",
+                "technologies": [
+                    "AngularJS",
+                    ".Net Core",
+                    "Tailwind CSS",
+                    "AWS",
+                    "MySQL",
+                    "MongoDB",
+                    "LoopBack",
+                    "Sendgrid",
+                    "JWT"
+                ],
+                "lenguages": ["TypeScript", "C#"],
+                "media": "src/assets/projects/akinmueble-real-estate-website/",
+                "demo": "",
+                "source": [
+                    "https://github.com/df1903/frontend-akinmueble",
+                    "https://github.com/df1903/ms-business-logic-akinmueble",
+                    "https://github.com/df1903/ms-security-akinmueble",
+                    "https://github.com/df1903/ms-notifications-akinmueble"
+                ]
+            }
+        ]
+    },
+    "experience": {
+        "title": "Experience",
+        "education": "Education",
+        "work": "Work Experience",
+        "items": {
+            "education": [
+                {
+                    "title": "Systems and Computer Engineering",
+                    "institution": "Universidad de Caldas",
+                    "period": "2021 - Present",
+                    "description": "Currently studying Systems and Computer Engineering."
+                },
+                {
+                    "title": "Industrial Control Technician",
+                    "institution": "Universidad Autonoma de Manizales",
+                    "period": "2019 - 2020",
+                    "description": "Managment and control of industrial processes with PLCs and SCADA systems."
+                }
+            ],
+            "work": [
+                {
+                    "title": "Nothing",
+                    "company": "Nowhere",
+                    "period": "Present",
+                    "description": "I'm currently looking for a job."
+                }
+            ]
+        }
+    },
+    "contact": {
+        "title": "Get in Touch",
+        "contactInformation": "Contact Information",
+        "description": "Feel free to reach out if you're looking for a developer, have a question, or just want to connect.",
+        "emailTitle": "Email",
+        "phoneTitle": "Phone",
+        "locationTitle": "Location",
+        "nameLabel": "Name",
+        "emailLabel": "Email",
+        "messageLabel": "Message",
+        "submitButton": "Send Message",
+        "emailPlaceholder": "your.email@example.com",
+        "namePlaceholder": "Your Name",
+        "messagePlaceholder": "Your message here...",
+        "messageSent": "Message Sent!",
+        "messageText": "Thank you for your message. I'll get back to you soon.",
+        "messageError": "Error! :("
+    },
+    "footer": {
+        "copyright": "© 2025 Kevin Lopez. All rights reserved."
+    },
+    "theme": {
+        "light": "Light",
+        "dark": "Dark"
+    },
+    "language": {
+        "en": "English",
+        "es": "Spanish"
+    },
+    "personal": {
+        "email": "kevin.lopez.systems@gmail.com",
+        "phone": "+57 301 660 8323",
+        "location": "Manizales, Caldas, Colombia",
+        "github": "",
+        "linkedin": ""
+    }
+}
