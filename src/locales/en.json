@@ -9,7 +9,8 @@
         "greeting": "Hello, I'm",
         "name": "Kevin Lopez",
         "roles": ["Coder", "Programmer", "Engineer"],
-        "description": "I create elegant solutions to complex problems through code."
+        "description": "I create elegant solutions to complex problems through code.",
+        "emailCopied": "Email address copied to clipboard!"
     },
     "projects": {
         "title": "Featured Projects",
@@ -30,7 +31,7 @@
                     "Prisma ORM"
                 ],
                 "lenguages": ["JavaScript"],
-                "media": "src/assets/projects/fleet-management-system/",
+                "media": ["src/assets/projects/fleet-management-system/"],
                 "demo": "",
                 "source": ["https://github.com/Zack4U/fleet-management"]
             },
@@ -39,7 +40,7 @@
                 "description": "A full stack application to manage a dental clinic. Includes patient management, appointments, treatments, billing, a visual and dynamic Teeth Chart.",
                 "technologies": ["SpringBoot", "Tailwind CSS", "MySQL"],
                 "lenguages": ["Java"],
-                "media": "src/assets/projects/dental-clinic-management-system/",
+                "media": ["src/assets/projects/dental-clinic-management-system/"],
                 "demo": "",
                 "source": ["https://github.com/Zack4U/clinic-spring"]
             },
@@ -58,7 +59,7 @@
                     "JWT"
                 ],
                 "lenguages": ["TypeScript", "C#"],
-                "media": "src/assets/projects/akinmueble-real-estate-website/",
+                "media": ["src/assets/projects/akinmueble-real-estate-website/"],
                 "demo": "",
                 "source": [
                     "https://github.com/df1903/frontend-akinmueble",

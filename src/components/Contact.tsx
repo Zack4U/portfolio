@@ -3,29 +3,29 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useTheme } from "../context/ThemeContext";
+import { sendEmail } from "../services/api";
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
-  const { colors } = useTheme();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      await sendEmail(name, email, message);
+
       setIsSubmitted(true);
       setName("");
       setEmail("");
@@ -35,7 +35,17 @@ const Contact: React.FC = () => {
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
-    }, 1500);
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setIsError(true);
+
+      // Reset error message after 5 seconds
+      setTimeout(() => {
+        setIsError(false);
+      }, 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const containerVariants = {
