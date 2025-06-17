@@ -100,6 +100,7 @@
     },
     "contact": {
         "title": "Get in Touch",
+        "contactQuickAccess": "Quick Access",
         "contactInformation": "Contact Information",
         "description": "Feel free to reach out if you're looking for a developer, have a question, or just want to connect.",
         "emailTitle": "Email",
@@ -125,13 +126,13 @@
     },
     "language": {
         "en": "English",
-        "es": "Spanish"
+        "es": "Español"
     },
     "personal": {
         "email": "kevin.lopez.systems@gmail.com",
         "phone": "+57 301 660 8323",
         "location": "Manizales, Caldas, Colombia",
-        "github": "",
-        "linkedin": ""
+        "github": "https://github.com/Zack4U",
+        "linkedin": "https://www.linkedin.com/in/kevins-lopezs/"
     }
 }

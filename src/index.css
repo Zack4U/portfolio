@@ -16,9 +16,9 @@
     --color-background: rgb(255, 255, 255);
     --color-backgroundAlt: rgb(245, 245, 245);
     --color-text: rgb(33, 33, 33);
-    --color-textAlt: rgb(102, 102, 102);
-    --color-textLight: rgb(153, 153, 153);
-    --color-textDark: rgb(51, 51, 51);
+    --color-textAlt: rgb(255, 255, 255);
+    --color-textLight: rgb(49, 49, 49);
+    --color-textDark: rgb(230, 230, 230);
     --color-border: rgb(229, 231, 235);
     --color-glass: rgb(33, 33, 33);
 }
