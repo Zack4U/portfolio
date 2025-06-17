@@ -1,11 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Github, Linkedin, Twitter, Instagram } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
+import { Github, Linkedin} from 'lucide-react';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
-  const { colors } = useTheme();
   
   return (
     <footer className="bg-black text-white py-12">

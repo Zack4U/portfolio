@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useTheme } from '../context/ThemeContext';
 
 interface Project {
   title: string;
@@ -16,7 +15,6 @@ interface Project {
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
-  const { colors } = useTheme();
   const [activeProject, setActiveProject] = useState<number | null>(null);
   const [isPaused, setIsPaused] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);

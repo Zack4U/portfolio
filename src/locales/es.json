@@ -9,7 +9,8 @@
         "greeting": "Hola, soy",
         "name": "Kevin Lopez",
         "roles": ["Programador", "Desarrollador", "Ingeniero"],
-        "description": "Creo soluciones elegantes para problemas complejos a través del código."
+        "description": "Creo soluciones elegantes para problemas complejos a través del código.",
+        "emailCopied": "¡Dirección de correo copiada al portapapeles!"
     },
     "projects": {
         "title": "Proyectos Destacados",
@@ -30,7 +31,7 @@
                     "Prisma ORM"
                 ],
                 "lenguages": ["JavaScript"],
-                "media": "src/assets/projects/fleet-management-system/",
+                "media": ["src/assets/projects/fleet-management-system/"],
                 "demo": "",
                 "source": ["https://github.com/Zack4U/fleet-management"]
             },
@@ -39,7 +40,7 @@
                 "description": "Una aplicación full stack para gestionar una clínica dental. Incluye gestión de pacientes, citas, tratamientos, facturación, un gráfico de dientes visual y dinámico.",
                 "technologies": ["SpringBoot", "Tailwind CSS", "MySQL"],
                 "lenguages": ["Java"],
-                "media": "src/assets/projects/dental-clinic-management-system/",
+                "media": ["src/assets/projects/dental-clinic-management-system/"],
                 "demo": "",
                 "source": ["https://github.com/Zack4U/clinic-spring"]
             },
@@ -48,6 +49,7 @@
                 "description": "Un sitio web full stack de bienes raíces con microservicios. Incluye listados de propiedades, búsqueda, filtros, contacto, flujo de trabajo empresarial completamente web y notificaciones por correo electrónico/SMS",
                 "technologies": [
                     "AngularJS",
+                    ".Net Core",
                     "Tailwind CSS",
                     "AWS",
                     "MySQL",
@@ -56,8 +58,8 @@
                     "Sendgrid",
                     "JWT"
                 ],
-                "lenguages": ["TypeScript", ".Net Core", "C#"],
-                "media": "src/assets/projects/akinmueble-real-estate-website/",
+                "lenguages": ["TypeScript", "C#"],
+                "media": ["src/assets/projects/akinmueble-real-estate-website/"],
                 "demo": "",
                 "source": [
                     "https://github.com/df1903/frontend-akinmueble",
@@ -130,7 +132,7 @@
         "email": "kevin.lopez.systems@gmail.com",
         "phone": "+57 301 660 8323",
         "location": "Manizales, Caldas, Colombia",
-        "github": "",
-        "linkedin": ""
+        "github": "https://github.com/Zack4U",
+        "linkedin": "https://www.linkedin.com/in/kevins-lopezs/"
     }
 }

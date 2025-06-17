@@ -2,7 +2,6 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useTheme } from '../context/ThemeContext';
 
 interface TimelineItem {
   title: string;
@@ -14,7 +13,6 @@ interface TimelineItem {
 
 const Experience: React.FC = () => {
   const { t } = useTranslation();
-  const { colors } = useTheme();
   
   const education = t('experience.items.education', { returnObjects: true }) as TimelineItem[];
   const work = t('experience.items.work', { returnObjects: true }) as TimelineItem[];
@@ -91,7 +89,6 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ item, index, isLeft, total 
     threshold: 0.2,
     triggerOnce: true,
   });
-  const { colors } = useTheme();
 
   const variants = {
     hidden: { 

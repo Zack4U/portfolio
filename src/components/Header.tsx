@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../context/ThemeContext';
-import { Menu, X, Moon, Sun, Globe } from 'lucide-react';
+import { Menu, X, Moon, Sun, Globe} from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const { theme, toggleTheme, colors } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);

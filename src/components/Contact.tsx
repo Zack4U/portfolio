@@ -3,39 +3,49 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
+import { sendEmail } from '../services/api';
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
-  const { colors } = useTheme();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  
+  const [isError, setIsError] = useState(false);
+
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+  
+    try {
+      await sendEmail(name, email, message);
+  
       setIsSubmitted(true);
       setName('');
       setEmail('');
       setMessage('');
-      
+  
       // Reset success message after 5 seconds
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
-    }, 1500);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setIsError(true);
+  
+      // Reset error message after 5 seconds
+      setTimeout(() => {
+        setIsError(false);
+      }, 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const containerVariants = {
@@ -85,6 +95,18 @@ const Contact: React.FC = () => {
             {t('contact.description')}
           </motion.p>
         </motion.div>
+
+        {(isSubmitted || isError) && (
+          <div
+            className={`fixed top-4 right-4 z-50 px-4 py-2 rounded-lg shadow-lg text-white ${
+              isSubmitted ? 'bg-green-500' : 'bg-red-500'
+            }`}
+          >
+            {isSubmitted
+              ? t('contact.messageSent') 
+              : t('contact.messageError')}
+          </div>
+        )}
 
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row gap-8">
