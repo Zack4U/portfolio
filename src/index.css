@@ -20,17 +20,28 @@
     --color-textLight: rgb(49, 49, 49);
     --color-textDark: rgb(230, 230, 230);
     --color-border: rgb(229, 231, 235);
-    --color-glass: rgb(33, 33, 33);
+    --color-glass: rgba(255, 255, 255, 0.7);
+    --color-glassBorder: rgba(255, 255, 255, 0.18);
 }
 
 html {
+    overflow-x: hidden;
     scroll-behavior: smooth;
+    
 }
 
 body {
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
+    overflow-x: hidden;
+    width: 100vw;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 /* Typing cursor animation */
@@ -117,31 +128,221 @@ body {
     font-family: "Press Start 2P", serif;
 }
 
-.glass {
-    opacity: 0.9;
-    backdrop-filter: blue(50px);
-}
-
-.glass-effect {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    padding: 1rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transform: translateY(70%);
-    transition: transform 0.3s ease-in-out;
-    color: var(--color-glass);
-}
-
 .project-card {
-    position: relative;
-    overflow: hidden;
-    height: 100%;
+  position: relative;
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
-.project-card:hover .glass-effect {
-    transform: translateY(0%);
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-description {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  color: #fff;
+  font-weight: 500;
+  z-index: 2;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+}
+
+@keyframes hero-gradient-animation {
+    0% {
+        --c-0: hsla(0, 85%, 50%, 1);         /* Rojo intenso */
+        --s-start-0: 9%;
+        --s-end-0: 58.89%;
+        --x-0: 13%;
+        --y-0: 16%;
+        --y-1: 89%;
+        --s-start-1: 9%;
+        --s-end-1: 58.89%;
+        --c-1: hsla(0, 93%, 26%, 0.91);     /* Naranja rojizo */
+        --x-1: 14%;
+        --x-2: 23%;
+        --c-2: hsla(350, 80%, 30%, 1);       /* Rojo oscuro */
+        --s-start-2: 2%;
+        --s-end-2: 60%;
+        --y-2: 23%;
+    }
+
+    100% {
+        --c-0: hsla(5, 90%, 40%, 1);         /* Rojo-anaranjado */
+        --s-start-0: 4%;
+        --s-end-0: 60%;
+        --x-0: 95%;
+        --y-0: 18%;
+        --y-1: 47%;
+        --s-start-1: 5%;
+        --s-end-1: 60%;
+        --c-1: hsla(9, 92%, 26%, 0.91);        /* Naranja claro */
+        --x-1: 97%;
+        --x-2: 92%;
+        --c-2: hsla(0, 70%, 20%, 1);         /* Rojo muy oscuro */
+        --s-start-2: 4%;
+        --s-end-2: 73%;
+        --y-2: 91%;
+    }
+}
+
+@property --c-0 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: rgb(255, 0, 0)
+}
+
+@property --s-start-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 9%
+}
+
+@property --s-end-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 58.89119889119889%
+}
+
+@property --x-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 13%
+}
+
+@property --y-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 16%
+}
+
+@property --y-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 89%
+}
+
+@property --s-start-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 9%
+}
+
+@property --s-end-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 58.89119889119889%
+}
+
+@property --c-1 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(345, 88%, 31%, 0.91)
+}
+
+@property --x-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 14%
+}
+
+@property --x-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 23%
+}
+
+@property --c-2 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(264, 73%, 3%, 1)
+}
+
+@property --s-start-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 2%
+}
+
+@property --s-end-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 60%
+}
+
+@property --y-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 23%
+}
+
+.app-bg {
+    --c-0: rgb(0, 0, 0);
+    --x-0: 13%;
+    --y-0: 16%;
+    --y-1: 89%;
+    --c-1: hsla(0, 90%, 45%, 0.91);
+    --x-1: 14%;
+    --x-2: 23%;
+    --c-2: hsla(350, 80%, 30%, 1);
+    --y-2: 23%;
+    background-color: var(--color-background); 
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1288 1288' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2));
+    animation: hero-gradient-animation 3s linear infinite alternate;
+    background-blend-mode: overlay, overlay, normal, normal;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.app-bg-alt {
+    background-color: var(--color-backgroundAlt);
+    background-image: url("/src/assets/general/bg.svg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.glassmorphism {
+  background: var(--color-glass);
+  box-shadow: 0 8px 32px 0 var(--color-glassBorder);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  border: 1px solid var(--color-glassBorder);
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.glassmorphism-mid {
+    background: var(--color-glass);
+  box-shadow: 0 8px 32px 0 var(--color-glassBorder);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  border: 1px solid var(--color-glassBorder);
+  padding: 1rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.media-arrow {
+  background: transparent;
+  transition: background 0.2s;
+}
+
+.media-arrow:hover {
+  background: rgba(255, 0, 0, 0.05); /* Rojo translúcido */
 }
