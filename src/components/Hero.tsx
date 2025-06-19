@@ -135,7 +135,7 @@ const Hero: React.FC = () => {
                 </a>
                 {/* CV Download Button */}
                 <a
-                  href={`/src/assets/general/cv_${
+                  href={`/assets/general/cv_${
                     i18n.language === "es" ? "es" : "en"
                   }.pdf`}
                   download

@@ -244,7 +244,7 @@ const Projects: React.FC = () => {
   const mediaList =
     currentProject.media && currentProject.media.length > 0
       ? currentProject.media
-      : ["/src/assets/projects/default.jpeg"];
+      : ["/assets/projects/default.jpeg"];
   const safeMediaIndex =
     currentMediaIndex >= mediaList.length ? 0 : currentMediaIndex;
   const currentMedia = mediaList[safeMediaIndex];
