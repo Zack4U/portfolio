@@ -31,16 +31,34 @@
           "Prisma ORM"
         ],
         "lenguages": ["JavaScript"],
-        "media": [],
+        "media": [
+          "https://i.imgur.com/ncZNMkW.mp4",
+          "https://i.imgur.com/eWGNXZZ.png",
+          "https://i.imgur.com/qIZCx1j.png",
+          "https://i.imgur.com/SHm4sP4.png",
+          "https://i.imgur.com/GUEbAER.png",
+          "https://i.imgur.com/dJ5EMk9.png",
+          "https://i.imgur.com/WhQEuSQ.png",
+          "https://i.imgur.com/ROy1Dns.png",
+          "https://i.imgur.com/c2YY60I.png",
+          "https://i.imgur.com/j7g8vxg.png",
+          "https://i.imgur.com/UR96RFt.png"
+        ],
         "demo": "",
         "source": ["https://github.com/Zack4U/fleet-management"]
       },
       {
         "title": "Sistema de Gestión de Clínica Dental",
-        "description": "Una aplicación full stack para gestionar una clínica dental. Incluye gestión de pacientes, citas, tratamientos, facturación, un gráfico de dientes visual y dinámico.",
-        "technologies": ["SpringBoot", "Tailwind CSS", "MySQL"],
+        "description": "Una aplicación full stack para gestionar una clínica dental. Incluye gestión de pacientes, citas, tratamientos, facturación, un gráfico de dientes visual y dinámico. Autenticación y autorización de usuarios con OAuth 2.0.",
+        "technologies": ["SpringBoot", "Tailwind CSS", "MySQL", "OAuth 2.0"],
         "lenguages": ["Java"],
-        "media": [],
+        "media": [
+          "https://i.imgur.com/PKqLfzl.mp4",
+          "https://i.imgur.com/exXIIzV.png",
+          "https://i.imgur.com/lwT9013.png",
+          "https://i.imgur.com/aeWiMKP.png",
+          "https://i.imgur.com/x34nyuu.png"
+        ],
         "demo": "",
         "source": ["https://github.com/Zack4U/clinic-spring"]
       },

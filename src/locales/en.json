@@ -32,18 +32,33 @@
         ],
         "lenguages": ["JavaScript"],
         "media": [
-          "https://i.imgur.com/RgwSGwJ.png",
-          "https://i.imgur.com/RgwSGwJ.png"
+          "https://i.imgur.com/ncZNMkW.mp4",
+          "https://i.imgur.com/eWGNXZZ.png",
+          "https://i.imgur.com/qIZCx1j.png",
+          "https://i.imgur.com/SHm4sP4.png",
+          "https://i.imgur.com/GUEbAER.png",
+          "https://i.imgur.com/dJ5EMk9.png",
+          "https://i.imgur.com/WhQEuSQ.png",
+          "https://i.imgur.com/ROy1Dns.png",
+          "https://i.imgur.com/c2YY60I.png",
+          "https://i.imgur.com/j7g8vxg.png",
+          "https://i.imgur.com/UR96RFt.png"
         ],
         "demo": "",
         "source": ["https://github.com/Zack4U/fleet-management"]
       },
       {
         "title": "Dental Clinic Management System",
-        "description": "A full stack application to manage a dental clinic. Includes patient management, appointments, treatments, billing, a visual and dynamic Teeth Chart.",
-        "technologies": ["SpringBoot", "Tailwind CSS", "MySQL"],
+        "description": "A full stack application to manage a dental clinic. Includes patient management, appointments, treatments, billing, a visual and dynamic Teeth Chart. User authentication and authorization with OAuth 2.0.",
+        "technologies": ["SpringBoot", "Tailwind CSS", "MySQL", "OAuth 2.0"],
         "lenguages": ["Java"],
-        "media": [],
+        "media": [
+          "https://i.imgur.com/PKqLfzl.mp4",
+          "https://i.imgur.com/exXIIzV.png",
+          "https://i.imgur.com/lwT9013.png",
+          "https://i.imgur.com/aeWiMKP.png",
+          "https://i.imgur.com/x34nyuu.png"
+        ],
         "demo": "",
         "source": ["https://github.com/Zack4U/clinic-spring"]
       },

@@ -219,14 +219,14 @@ const Projects: React.FC = () => {
       if (Date.now() > pauseUntil) {
         setCurrentProjectIndex((prev) => (prev + 1) % projects.length);
       }
-    }, 4000);
+    }, 30000);
 
     return () => clearInterval(interval);
   }, [inView, projects.length, pauseUntil]);
 
   const handleProjectChange = (index: number) => {
     setCurrentProjectIndex(index);
-    setPauseUntil(Date.now() + 15000); // Pausa 15 segundos
+    setPauseUntil(Date.now() + 180000); // Pausa 180 segundos
   };
 
   const itemVariants = {
@@ -245,7 +245,9 @@ const Projects: React.FC = () => {
     currentProject.media && currentProject.media.length > 0
       ? currentProject.media
       : ["/src/assets/projects/default.jpeg"];
-  const currentMedia = mediaList[currentMediaIndex];
+  const safeMediaIndex =
+    currentMediaIndex >= mediaList.length ? 0 : currentMediaIndex;
+  const currentMedia = mediaList[safeMediaIndex];
 
   const isVideo = (url: string) => {
     return (
@@ -307,7 +309,7 @@ const Projects: React.FC = () => {
                   className="media-arrow group absolute left-0 top-0 h-full w-16 flex items-center justify-center bg-transparent z-10"
                   aria-label="Anterior"
                 >
-                  <span className="arrow-circle flex items-center justify-center w-12 h-12 rounded-full text-white text-2xl transition-all group-hover:animate-bounce-side">
+                  <span className="arrow-circle flex items-center justify-center w-12 h-12 rounded-full text-primary text-2xl transition-all group-hover:animate-bounce-side">
                     ←
                   </span>
                 </button>
@@ -343,7 +345,7 @@ const Projects: React.FC = () => {
                   className="media-arrow group absolute right-0 top-0 h-full w-16 flex items-center justify-center bg-transparent z-10"
                   aria-label="Siguiente"
                 >
-                  <span className="arrow-circle flex items-center justify-center w-12 h-12 rounded-full text-white text-2xl transition-all group-hover:animate-bounce-side">
+                  <span className="arrow-circle flex items-center justify-center w-12 h-12 rounded-full text-primary text-2xl transition-all group-hover:animate-bounce-side">
                     →
                   </span>
                 </button>
@@ -356,7 +358,7 @@ const Projects: React.FC = () => {
                       key={idx}
                       onClick={() => setCurrentMediaIndex(idx)}
                       className={`w-2 h-2 rounded-full transition-all ${
-                        idx === currentMediaIndex
+                        idx === safeMediaIndex
                           ? "bg-primary scale-125"
                           : "bg-theme-alt hover:bg-primary-light"
                       }`}
