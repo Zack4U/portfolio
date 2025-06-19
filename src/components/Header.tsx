@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useTheme } from '../context/ThemeContext';
-import { Menu, X, Moon, Sun, Globe} from 'lucide-react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { useTheme } from "../context/ThemeContext";
+import { Menu, X, Moon, Sun, Globe } from "lucide-react";
+import { motion } from "framer-motion";
+import Logo from "/logo.svg?react";
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -24,30 +25,32 @@ const Header: React.FC = () => {
       setIsScrolled(window.scrollY > 10);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { name: t('header.home'), href: '#home' },
-    { name: t('header.projects'), href: '#projects' },
-    { name: t('header.experience'), href: '#experience' },
-    { name: t('header.contact'), href: '#contact' },
+    { name: t("header.home"), href: "#home" },
+    { name: t("header.projects"), href: "#projects" },
+    { name: t("header.experience"), href: "#experience" },
+    { name: t("header.contact"), href: "#contact" },
   ];
 
   return (
-    <header 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-theme/90 backdrop-blur-sm shadow-md' 
-          : 'bg-transparent'
+    <header
+      className={`fixed w-full z-50  ${
+        isScrolled ? "bg-theme/90 backdrop-blur-sm shadow-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <a href="#home" className="text-xl font-bold text-theme">
-              Kevin Lopez
+            <a
+              href="#home"
+              className="text-xl font-bold text-theme flex items-center "
+            >
+              <Logo className="h-10 w-10 mr-2 text-theme" />
+              {t("hero.name")}
             </a>
           </div>
 
@@ -67,9 +70,11 @@ const Header: React.FC = () => {
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded-full hover:bg-theme-alt transition-colors"
-                aria-label={theme === 'dark' ? t('theme.light') : t('theme.dark')}
+                aria-label={
+                  theme === "dark" ? t("theme.light") : t("theme.dark")
+                }
               >
-                {theme === 'dark' ? (
+                {theme === "dark" ? (
                   <Sun size={20} className="text-yellow-400" />
                 ) : (
                   <Moon size={20} className="text-theme" />
@@ -88,24 +93,24 @@ const Header: React.FC = () => {
                 {isLanguageMenuOpen && (
                   <div className="absolute right-0 mt-2 w-40 bg-theme rounded-md shadow-lg py-1 z-10">
                     <button
-                      onClick={() => changeLanguage('en')}
+                      onClick={() => changeLanguage("en")}
                       className={`block px-4 py-2 text-sm w-full text-left ${
-                        i18n.language === 'en'
-                          ? 'text-primary bg-theme-alt'
-                          : 'text-theme-alt hover:bg-theme-alt'
+                        i18n.language === "en"
+                          ? "text-primary bg-theme-alt"
+                          : "text-theme-alt hover:bg-theme-alt"
                       }`}
                     >
-                      {t('language.en')}
+                      {t("language.en")}
                     </button>
                     <button
-                      onClick={() => changeLanguage('es')}
+                      onClick={() => changeLanguage("es")}
                       className={`block px-4 py-2 text-sm w-full text-left ${
-                        i18n.language === 'es'
-                          ? 'text-primary bg-theme-alt'
-                          : 'text-theme-alt hover:bg-theme-alt'
+                        i18n.language === "es"
+                          ? "text-primary bg-theme-alt"
+                          : "text-theme-alt hover:bg-theme-alt"
                       }`}
                     >
-                      {t('language.es')}
+                      {t("language.es")}
                     </button>
                   </div>
                 )}
@@ -118,9 +123,9 @@ const Header: React.FC = () => {
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full hover:bg-theme-alt transition-colors"
-              aria-label={theme === 'dark' ? t('theme.light') : t('theme.dark')}
+              aria-label={theme === "dark" ? t("theme.light") : t("theme.dark")}
             >
-              {theme === 'dark' ? (
+              {theme === "dark" ? (
                 <Sun size={20} className="text-yellow-400" />
               ) : (
                 <Moon size={20} className="text-theme" />
@@ -132,11 +137,7 @@ const Header: React.FC = () => {
               className="p-2 rounded-md text-theme-alt hover:bg-theme-alt transition-colors"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? (
-                <X size={24} />
-              ) : (
-                <Menu size={24} />
-              )}
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
@@ -165,29 +166,25 @@ const Header: React.FC = () => {
             <div className="py-2 border-t border-theme">
               <button
                 onClick={() => {
-                  changeLanguage('en');
+                  changeLanguage("en");
                   setIsMenuOpen(false);
                 }}
                 className={`block py-2 w-full text-left ${
-                  i18n.language === 'en'
-                    ? 'text-primary'
-                    : 'text-theme-alt'
+                  i18n.language === "en" ? "text-primary" : "text-theme-alt"
                 }`}
               >
-                {t('language.en')}
+                {t("language.en")}
               </button>
               <button
                 onClick={() => {
-                  changeLanguage('es');
+                  changeLanguage("es");
                   setIsMenuOpen(false);
                 }}
                 className={`block py-2 w-full text-left ${
-                  i18n.language === 'es'
-                    ? 'text-primary'
-                    : 'text-theme-alt'
+                  i18n.language === "es" ? "text-primary" : "text-theme-alt"
                 }`}
               >
-                {t('language.es')}
+                {t("language.es")}
               </button>
             </div>
           </div>

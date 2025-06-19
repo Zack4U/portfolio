@@ -10,7 +10,8 @@
     "name": "Kevin Lopez",
     "roles": ["Coder", "Programmer", "Engineer"],
     "description": "I create elegant solutions to complex problems through code.",
-    "emailCopied": "Email address copied to clipboard!"
+    "emailCopied": "Email address copied to clipboard!",
+    "cv": "CV"
   },
   "projects": {
     "title": "Featured Projects",

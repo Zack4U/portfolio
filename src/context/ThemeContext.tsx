@@ -30,7 +30,7 @@ const lightColors: ThemeColors = {
   primaryLight: "rgb(255, 10, 10)",
   primaryDark: "rgb(160, 0, 35)",
   background: "rgb(255, 255, 255)",
-  backgroundAlt: "rgb(245, 245, 245)",
+  backgroundAlt: "rgb(220, 220, 220)",
   text: "rgb(33, 33, 33)",
   textAlt: "rgb(102, 102, 102)",
   textLight: "rgb(255, 255, 255)",

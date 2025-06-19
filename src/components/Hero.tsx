@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github, FileSymlink } from "lucide-react";
 import "../index.css";
 
 const Hero: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -126,12 +126,29 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.8 }}
             >
-              <a
-                href="#contact"
-                className="inline-block bg-primary hover:bg-primary-hover text-white font-medium py-3 px-8 rounded-full transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 duration-200"
-              >
-                {t("header.contact")}
-              </a>
+              <div className="flex justify-center items-center gap-2">
+                <a
+                  href="#contact"
+                  className="inline-block bg-primary hover:bg-primary-hover text-white font-medium py-3 px-8 rounded-full transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 duration-200"
+                >
+                  {t("header.contact")}
+                </a>
+                {/* CV Download Button */}
+                <a
+                  href={`/src/assets/general/cv_${
+                    i18n.language === "es" ? "es" : "en"
+                  }.pdf`}
+                  download
+                  className="inline-flex items-center justify-center bg-theme-alt  font-medium py-3 px-4 rounded-full transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 duration-200"
+                  aria-label="Download CV"
+                  style={{ minWidth: 44, minHeight: 44 }}
+                >
+                  <FileSymlink size={20} className="mr-2 text-theme" />
+                  <span className="inline text-theme">
+                    {t("hero.cv") || "CV"}
+                  </span>
+                </a>
+              </div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}

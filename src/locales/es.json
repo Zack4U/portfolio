@@ -10,7 +10,8 @@
     "name": "Kevin Lopez",
     "roles": ["Programador", "Desarrollador", "Ingeniero"],
     "description": "Creo soluciones elegantes para problemas complejos a través del código.",
-    "emailCopied": "¡Dirección de correo copiada al portapapeles!"
+    "emailCopied": "¡Dirección de correo copiada al portapapeles!",
+    "cv": "CV"
   },
   "projects": {
     "title": "Proyectos Destacados",

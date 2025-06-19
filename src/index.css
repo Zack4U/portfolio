@@ -14,7 +14,7 @@
     --color-primaryLight: rgb(245, 220, 225);
     --color-primaryDark: rgb(160, 0, 35);
     --color-background: rgb(255, 255, 255);
-    --color-backgroundAlt: rgb(245, 245, 245);
+    --color-backgroundAlt: rgb(165, 165, 165);
     --color-text: rgb(33, 33, 33);
     --color-textAlt: rgb(255, 255, 255);
     --color-textLight: rgb(49, 49, 49);
@@ -26,7 +26,6 @@
 
 html {
     overflow-x: hidden;
-    scroll-behavior: smooth;
     
 }
 
