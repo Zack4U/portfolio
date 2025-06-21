@@ -32,6 +32,7 @@ const Header: React.FC = () => {
   const navLinks = [
     { name: t("header.home"), href: "#home" },
     { name: t("header.projects"), href: "#projects" },
+    { name: t("header.skills"), href: "#skills" },
     { name: t("header.experience"), href: "#experience" },
     { name: t("header.contact"), href: "#contact" },
   ];

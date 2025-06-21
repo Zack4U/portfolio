@@ -2,6 +2,7 @@
   "header": {
     "home": "Home",
     "projects": "Projects",
+    "skills": "Skills",
     "experience": "Experience",
     "contact": "Contact"
   },
@@ -15,7 +16,8 @@
   },
   "projects": {
     "title": "Featured Projects",
-    "viewProject": "View Project",
+    "viewProject": "View Code",
+    "viewDemo": "Run Demo",
     "technologies": "Technologies",
     "lenguages": "Lenguages",
     "items": [
@@ -78,7 +80,12 @@
           "JWT"
         ],
         "lenguages": ["TypeScript", ".NET"],
-        "media": [],
+        "media": [
+          "https://i.imgur.com/SMfZh0W.mp4",
+          "https://i.imgur.com/LsvPwVI.png",
+          "https://i.imgur.com/fUV1b7Q.png",
+          "https://i.imgur.com/dBbeSYS.png"
+        ],
         "demo": "",
         "source": [
           "https://github.com/df1903/frontend-akinmueble",
@@ -86,6 +93,105 @@
           "https://github.com/df1903/ms-security-akinmueble",
           "https://github.com/df1903/ms-notifications-akinmueble"
         ]
+      }
+    ]
+  },
+  "technologies": {
+    "title": "Skills & Technologies",
+    "description": "These are some of the technologies and tools I frequently use to build robust and modern solutions.",
+    "items": [
+      {
+        "name": "JavaScript",
+        "description": "Essential programming language for frontend and backend web development.",
+        "icon": "/assets/technologies/javascript.svg"
+      },
+      {
+        "name": "TypeScript",
+        "description": "A superset of JavaScript that adds static typing to improve code quality and maintainability.",
+        "icon": "/assets/technologies/typescript.svg"
+      },
+      {
+        "name": "Python",
+        "description": "Versatile programming language known for its simplicity and readability, widely used in web development, data science, and automation.",
+        "icon": "/assets/technologies/python.svg"
+      },
+      {
+        "name": "Java",
+        "description": "Object-oriented programming language used for building cross-platform applications, from web to mobile.",
+        "icon": "/assets/technologies/java.svg"
+      },
+      {
+        "name": "C/C++",
+        "description": "General-purpose programming languages widely used in system development and high-performance applications.",
+        "icon": "/assets/technologies/c.svg"
+      },
+
+      {
+        "name": "Git",
+        "description": "Distributed version control system for efficient source code management.",
+        "icon": "/assets/technologies/git.svg"
+      },
+      {
+        "name": "Docker",
+        "description": "Tool for creating, deploying, and running applications in containers.",
+        "icon": "/assets/technologies/docker.svg"
+      },
+      {
+        "name": "AWS",
+        "description": "Cloud services platform that allows easy deployment and scaling of applications.",
+        "icon": "/assets/technologies/aws.svg"
+      },
+
+      {
+        "name": "MongoDB",
+        "description": "Document-oriented NoSQL database, perfect for flexible and scalable applications.",
+        "icon": "/assets/technologies/mongodb.svg"
+      },
+      {
+        "name": "MySQL",
+        "description": "Widely used relational database management system in enterprise applications.",
+        "icon": "/assets/technologies/mysql.svg"
+      },
+      {
+        "name": "PostgreSQL",
+        "description": "Advanced open-source relational database known for its robustness and extensibility.",
+        "icon": "/assets/technologies/postgresql.svg"
+      },
+
+      {
+        "name": "React",
+        "description": "JavaScript library for building interactive and modern user interfaces.",
+        "icon": "/assets/technologies/react.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "description": "Utility-first CSS framework for quickly building modern and responsive interfaces.",
+        "icon": "/assets/technologies/tailwind.svg"
+      },
+      {
+        "name": "Spring Boot",
+        "description": "Java framework for building robust and productive backend applications.",
+        "icon": "/assets/technologies/springboot.svg"
+      },
+      {
+        "name": "Node.js",
+        "description": "JavaScript runtime environment for the server, ideal for scalable applications.",
+        "icon": "/assets/technologies/nodejs.svg"
+      },
+      {
+        "name": "LoopBack",
+        "description": "Framework for building RESTful APIs with Node.js, facilitating backend service creation.",
+        "icon": "/assets/technologies/loopback.svg"
+      },
+      {
+        "name": "AngularJS",
+        "description": "JavaScript framework for building dynamic web applications with a focus on single-page applications (SPAs).",
+        "icon": "/assets/technologies/angularjs.svg"
+      },
+      {
+        "name": "CUDA",
+        "description": "Parallel computing platform and API for using the GPU for general-purpose processing.",
+        "icon": "/assets/technologies/cuda.svg"
       }
     ]
   },

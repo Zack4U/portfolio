@@ -402,7 +402,7 @@ const Projects: React.FC = () => {
                     {currentProject.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="inline-block bg-primary-light text-theme-light text-xs px-2 py-1 rounded"
+                        className="inline-block bg-primary-light text-theme-light text-xs px-2 py-1 rounded hover:scale-105 transition-transform "
                       >
                         {tech}
                       </span>
@@ -414,18 +414,18 @@ const Projects: React.FC = () => {
                   {currentProject.demo && (
                     <a
                       href={currentProject.demo}
-                      className="inline-block text-primary hover:text-primary-hover font-medium text-center sm:text-left"
+                      className="inline-block text-primary hover:scale-105 font-medium text-center sm:text-left"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {t("projects.viewProject")} →
+                      {t("projects.viewDemo")} →
                     </a>
                   )}
                   {currentProject.source &&
                     currentProject.source.length > 0 && (
                       <a
                         href={currentProject.source[0]}
-                        className="inline-block text-theme-alt hover:text-theme font-medium text-center sm:text-left"
+                        className="inline-block text-theme-alt hover:text-primary hover:scale-105 font-medium text-center sm:text-left"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
